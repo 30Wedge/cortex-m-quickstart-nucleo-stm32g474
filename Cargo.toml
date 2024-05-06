@@ -1,8 +1,8 @@
 [package]
-authors = ["{{authors}}"]
+authors = ["amacgregor"]
 edition = "2018"
 readme = "README.md"
-name = "{{project-name}}"
+name = "hello_g0"
 version = "0.1.0"
 
 [dependencies]
@@ -10,6 +10,11 @@ cortex-m = "0.6.0"
 cortex-m-rt = "0.6.10"
 cortex-m-semihosting = "0.3.3"
 panic-halt = "0.2.0"
+panic-semihosting = "0.6.0"
+
+[dependencies.stm32g0]
+version = "0.15.1"
+features = ["stm32g071", "rt"]
 
 # Uncomment for the panic example.
 # panic-itm = "0.4.1"
@@ -26,7 +31,7 @@ panic-halt = "0.2.0"
 
 # this lets you use `cargo fix`!
 [[bin]]
-name = "{{project-name}}"
+name = "hello_g0"
 test = false
 bench = false
 
