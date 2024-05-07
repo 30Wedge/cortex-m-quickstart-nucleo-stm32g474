@@ -17,6 +17,10 @@ use cortex_m::Peripherals;
 use cortex_m_rt::{entry, exception};
 use cortex_m_semihosting::hprint;
 
+/* Include stm32g071 library to link in exception handlers */
+#[allow(unused_imports)]
+use stm32g0::stm32g071;
+
 #[entry]
 fn main() -> ! {
     let p = Peripherals::take().unwrap();
