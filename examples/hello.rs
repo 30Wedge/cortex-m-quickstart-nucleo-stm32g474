@@ -6,15 +6,14 @@
 use panic_halt as _;
 
 use cortex_m_rt::entry;
-use cortex_m_semihosting::{debug, hprintln};
+use cortex_m_semihosting::hprintln;
+
+/* Include stm32g474 library to link in exception handlers */
+#[allow(unused_imports)]
+use stm32g4::stm32g474;
 
 #[entry]
 fn main() -> ! {
     hprintln!("Hello, world!").unwrap();
-
-    // exit QEMU
-    // NOTE do not run this on hardware; it can corrupt OpenOCD state
-    //debug::exit(debug::EXIT_SUCCESS);
-
     loop {}
 }
