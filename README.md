@@ -4,7 +4,8 @@ This is a fork of https://github.com/rust-embedded/cortex-m-quickstart where I
 get some of their examples running on a [NUCLEO-STM32G474RE
 board.](https://www.st.com/en/evaluation-tools/nucleo-g474re.html)
 
-The goal of this repo is to make a few toy low level embedded stable rust programs that run on hardware.
+The goal of this repo is to make a few toy low level embedded stable rust programs that run on hardware. **There is support for different STM32 nucleo boards on different branches.**
+
 I'm sticking to low-level hardware abstractions by only using a `rust2svd`-based
 crate (`stm32g4` in this case) for hardware abstraction.
 I wrote these while following along with the [rust-embedded
